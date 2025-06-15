@@ -10,7 +10,7 @@ search_button.addEventListener("click", async () => {
   }
 });
 
-const apiKey = "API_KEY"; // Replace with your actual API key
+const apiKey = "fa356ff5";
 const resultsContainer = document.querySelector("#results");
 function searchMovies(query) {
   const url = `https://www.omdbapi.com/?s=${encodeURIComponent(
