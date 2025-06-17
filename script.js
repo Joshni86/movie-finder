@@ -37,7 +37,8 @@ function displayMovies(movies) {
   resultsContainer.innerHTML = "";
   movies.forEach((movie) => {
     const movieCard = document.createElement("div");
-    movieCard.className = "bg-white rounded-lg shadow-md p-4 m-2 center";
+    movieCard.className =
+      "bg-white rounded-lg shadow-md p-4 m-2 w-96 flex-none ";
     movieCard.innerHTML = `
   <div class="flex items-start gap-4 ">
   <img 
