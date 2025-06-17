@@ -37,12 +37,27 @@ function displayMovies(movies) {
   resultsContainer.innerHTML = "";
   movies.forEach((movie) => {
     const movieCard = document.createElement("div");
-    movieCard.className = "bg-white rounded-lg shadow-md p-4 m-2";
-    movieCard.innerHTML = `<h2 class="text-xl font-semibold">${
-      movie.Title
-    }</h2> <p><strong>Year:</strong> ${movie.Year}</p> <img src="${
+    movieCard.className = "bg-white rounded-lg shadow-md p-4 m-2 center";
+    movieCard.innerHTML = `
+  <div class="flex items-start gap-4 ">
+  <img 
+    src="${
       movie.Poster !== "N/A" ? movie.Poster : "https://via.placeholder.com/150"
-    }" alt="Poster for ${movie.Title}" class="mt-2 max-w-xs"> `;
+    }" 
+    alt="Poster for ${movie.Title}" 
+    class="mt-2 w-32 h-auto"
+  >
+    <div>
+      <h2 class="text-xl font-semibold">${movie.Title}</h2>
+      <p><strong>Year:</strong> ${movie.Year}</p>
+        <p><strong>Type:</strong> ${movie.Type}</p>
+        <p><strong>Ratings:</strong> ${movie.Ratings}</p>
+        <p><strong>Plot:</strong> ${movie.Plot}</p>
+
+    
+    </div>
+  </div>
+`;
     resultsContainer.appendChild(movieCard);
   });
 }
